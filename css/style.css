@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'GameboyPokemon';
+  src: url(/fonts/PokemonGb-RAeo.ttf); }
+
+* {
+  font-family: 'GameboyPokemon', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0; }
