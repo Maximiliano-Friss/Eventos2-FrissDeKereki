@@ -10,3 +10,94 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
+
+
+#container {
+    background-color: gray;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.3fr 5fr 0.5fr;
+    grid-template-areas:
+    "head head head"
+    "main main main"
+    "footer footer footer";
+    
+    header{
+        background-color: pink;
+        grid-area: head;
+    }
+
+    main{
+        background-color: yellow;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr 0.4fr 1fr;
+        grid-template-rows: 1fr 0.2fr 1fr;
+        grid-template-areas:
+        "rojo rojo rojo"
+        "negro negro negro"
+        "blanco blanco blanco";
+
+        #pokeball-rojo{
+            background-color: #C70D00;
+            grid-area: rojo;
+        }
+        
+        #pokeball-negro{
+            background-color: #020202;
+            grid-area: negro;
+        }
+    
+        #pokeball-blanco{
+            background-color: white;
+            grid-area: blanco;
+        }
+
+
+    }
+    
+    footer{
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        grid-area: footer;
+
+        img {
+            width: 10rem;
+        }
+    }
+
+}
+
+// #contRojo {
+//     background-color: blue; 
+//     width: 100%;
+//     height: 15rem;
+// }
+// #contNegro {
+//     background-color: #020202;
+//     width: 100%;
+//     height: 5rem;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     button {
+//         background-color: white;
+//         color: black;
+//         padding: 1rem 1.5rem;
+//         border-radius: 20%;
+
+//         &:hover {
+//             cursor: pointer;
+//         }
+//     }
+// }

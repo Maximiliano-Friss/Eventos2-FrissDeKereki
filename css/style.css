@@ -7,3 +7,42 @@
   font-size: 20px;
   margin: 0;
   padding: 0; }
+
+html, body {
+  height: 100%; }
+
+#container {
+  background-color: gray;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.3fr 5fr 0.5fr;
+  grid-template-areas: "head head head" "main main main" "footer footer footer"; }
+  #container header {
+    background-color: pink;
+    grid-area: head; }
+  #container main {
+    background-color: yellow;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    grid-template-areas: "rojo rojo rojo" "negro negro negro" "blanco blanco blanco"; }
+    #container main #pokeball-rojo {
+      background-color: #C70D00;
+      grid-area: rojo; }
+    #container main #pokeball-negro {
+      background-color: #020202;
+      grid-area: negro; }
+    #container main #pokeball-blanco {
+      background-color: white;
+      grid-area: blanco; }
+  #container footer {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: footer; }
+    #container footer img {
+      width: 10rem; }
