@@ -18,6 +18,21 @@ html, body {
 a {
   text-decoration: none; }
 
+.textos {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center; }
+
+.btn-Next {
+  color: white;
+  background-color: #C70D00;
+  border-radius: 10%;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  transition: 500ms; }
+  .btn-Next:hover {
+    background-color: yellow; }
+
 #container {
   background-color: gray;
   display: grid;
@@ -96,8 +111,39 @@ a {
     background-size: 25rem;
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr repeat(4, 1rem) 1fr;
-    grid-template-rows: 1fr repeat(4, 1rem) 1fr; }
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr); }
+    #container #main-container2 #logoPokemon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: 4/-4;
+      grid-row: 4/-4; }
+    #container #main-container2 #welcome-container {
+      grid-column: 3/-3;
+      grid-row: 2/-2;
+      display: flex;
+      flex-flow: row-reverse nowrap;
+      justify-content: space-around;
+      align-items: center; }
+      #container #main-container2 #welcome-container #welcome-container-nombres {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center; }
+        #container #main-container2 #welcome-container #welcome-container-nombres .inputNombres {
+          background-color: #c9c9c9;
+          font-size: 0.6rem;
+          margin: 1rem auto;
+          text-align: center;
+          padding: 1rem;
+          width: 20rem; }
+      #container #main-container2 #welcome-container .profOak {
+        width: 9em; }
+  #container .cuadroGrande {
+    background-color: white;
+    border: solid 3px black;
+    border-radius: 10%; }
   #container #footer-container {
     background: url(../img/grass-texture.png);
     background-repeat: repeat;
