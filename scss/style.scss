@@ -3,6 +3,11 @@
     src: url(/fonts/PokemonGb-RAeo.ttf);
 }
 
+@font-face {
+    font-family: 'TitlePokemon';
+    src: url(/fonts/Pokesolid.ttf);
+}
+
 * {
     font-family: 'GameboyPokemon', sans-serif; 
     font-size: 20px;
@@ -12,6 +17,10 @@
 
 html, body {
     height: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 #container {
@@ -26,15 +35,29 @@ html, body {
     "footer footer footer";
     
     header{
-        background-color: #020202;
-        opacity: 0.5;
-        // background: url(../img/grass-texture.png);
-        // background-repeat: repeat;
-        // background-size: 25rem;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         grid-area: head;
+        border-bottom: solid 4px black;
+        border-top: solid 4px black;
+
+        h1 {
+            color: black;
+            font-family: 'TitlePokemon';
+            font-size: 1.5rem;
+            letter-spacing: 0.4rem;
+            margin-top: -20px;
+            transition: 500ms;
+        
+            &:hover {
+                color: rgb(224, 9, 9);
+            }
+        }
     }
 
-    .main-container{
+    #main-container{
         background: url(../img/grass-texture.png);
         background-repeat: repeat;
         background-size: 25rem;
@@ -98,6 +121,16 @@ html, body {
         }
     }
     
+    #main-container2{
+        background: url(../img/grass-texture.png);
+        background-repeat: repeat;
+        background-size: 25rem;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 1rem) 1fr;
+        grid-template-rows: 1fr repeat(4, 1rem) 1fr;
+    }
+
     #footer-container{
         background: url(../img/grass-texture.png);
         background-repeat: repeat;
