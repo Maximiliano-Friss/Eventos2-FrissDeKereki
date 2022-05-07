@@ -15,6 +15,9 @@ const btnNext = document.createElement('button');
 const inputUsuario = document.createElement('input');
 const inputOponente = document.createElement('input');
 const submitNombres = document.createElement('input');
+const USUARIO = inputUsuario.value.toUpperCase();
+const ENEMIGO = inputOponente.value.toUpperCase;
+
 
 mainContainer2.onload = cargarMain2();
 
@@ -86,9 +89,7 @@ btnNext.addEventListener('click', () => {
 })
 
 submitNombres.addEventListener('click', () => {
-    const USUARIO = inputUsuario.value.toUpperCase();
     console.log(`Hola ${USUARIO}! Prepárate para conocer a tu oponente.`);
-    const ENEMIGO = inputOponente.value.toUpperCase;
     console.log(`Tu oponente será ${ENEMIGO}!`);
     
     
