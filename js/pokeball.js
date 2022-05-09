@@ -23,6 +23,6 @@ btnPokeball.addEventListener('click', () => {
         pokeballBlanco.remove();
     }, 1800);
     setTimeout(function () {
-        location.href = "./pages/battle.html";
+        location.href = "./pages/choose.html";
     }, 3000);
 });

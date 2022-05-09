@@ -29,6 +29,12 @@ a {
     text-align: center;
 }
 
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
 .btn-Next {
     color: white;
     background-color: #C70D00;
@@ -36,6 +42,7 @@ a {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     transition: 500ms;
+    text-align: center;
 
     &:hover {
         background-color: yellow;
@@ -55,6 +62,7 @@ a {
     header{
         background-color: white;
         display: flex;
+        height: 3rem;
         justify-content: center;
         align-items: center;
         grid-area: head;
@@ -66,7 +74,6 @@ a {
             font-family: 'TitlePokemon';
             font-size: 1.5rem;
             letter-spacing: 0.4rem;
-            margin-top: -20px;
             transition: 500ms;
         
             &:hover {
@@ -120,7 +127,6 @@ a {
             grid-column: 1/7;
             grid-row: 1/4;
             z-index: 1;
-
         }
         
         #pokeball-negro{
@@ -128,7 +134,6 @@ a {
             grid-column: 1/7;
             grid-row: 3/5;
             z-index: 2;
-
         }
     
         #pokeball-blanco{
@@ -161,21 +166,22 @@ a {
             grid-row: 2/-2;
             display: flex;
             flex-flow: row-reverse nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            padding: 0 10%;
 
             #welcome-container-nombres{
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: center;
                 align-items: center;
-
+                
                 .inputNombres{
                     background-color: rgb(201, 201, 201);
                     font-size: 0.6rem;
                     margin: 1rem auto;
                     text-align: center;
-                    padding: 1rem;
+                    padding: 0.5rem 1rem;
                     width: 20rem;
                 }
             }
@@ -183,8 +189,34 @@ a {
             .profOak{
                 width: 9em;
             }
+        }
 
-            
+        .lab-container{
+            background-color: rgba(255, 255, 255, 0.75);
+            grid-column: 4/-4;
+            grid-row: 3/-3;
+            border-radius: 5%;
+        }
+
+        .lab-container-pokemon{
+            grid-column: 6/8;
+            grid-row: 4/-4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 5rem;
+            }
+        }
+
+        .lab-container-pokeballs{
+            grid-column: 5/-5;
+            grid-row: 9/10;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
         }
     }
 
@@ -194,10 +226,15 @@ a {
         border-radius: 10%;
     }
 
+    .cuadroGrandeLab{
+        background: url(../img/oakLab.jpg);
+        background-size: cover;
+        border-radius: 10%;
+    }
+
     #footer-container{
-        background: url(../img/grass-texture.png);
-        background-repeat: repeat;
-        background-size: 25rem;
+        background-color: blue;
+        opacity: 0.8;
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.1fr;
         grid-template-rows: 1fr;

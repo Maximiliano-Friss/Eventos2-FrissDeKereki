@@ -23,13 +23,20 @@ a {
   line-height: 1.6;
   text-align: center; }
 
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center; }
+
 .btn-Next {
   color: white;
   background-color: #C70D00;
   border-radius: 10%;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  transition: 500ms; }
+  transition: 500ms;
+  text-align: center; }
   .btn-Next:hover {
     background-color: yellow; }
 
@@ -43,6 +50,7 @@ a {
   #container header {
     background-color: white;
     display: flex;
+    height: 3rem;
     justify-content: center;
     align-items: center;
     grid-area: head;
@@ -53,7 +61,6 @@ a {
       font-family: 'TitlePokemon';
       font-size: 1.5rem;
       letter-spacing: 0.4rem;
-      margin-top: -20px;
       transition: 500ms; }
       #container header h1:hover {
         color: #e00909; }
@@ -124,30 +131,54 @@ a {
       grid-row: 2/-2;
       display: flex;
       flex-flow: row-reverse nowrap;
-      justify-content: space-around;
-      align-items: center; }
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10%; }
       #container #main-container2 #welcome-container #welcome-container-nombres {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center; }
         #container #main-container2 #welcome-container #welcome-container-nombres .inputNombres {
           background-color: #c9c9c9;
           font-size: 0.6rem;
           margin: 1rem auto;
           text-align: center;
-          padding: 1rem;
+          padding: 0.5rem 1rem;
           width: 20rem; }
       #container #main-container2 #welcome-container .profOak {
         width: 9em; }
+    #container #main-container2 .lab-container {
+      background-color: rgba(255, 255, 255, 0.75);
+      grid-column: 4/-4;
+      grid-row: 3/-3;
+      border-radius: 5%; }
+    #container #main-container2 .lab-container-pokemon {
+      grid-column: 6/8;
+      grid-row: 4/-4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #container #main-container2 .lab-container-pokemon img {
+        width: 5rem; }
+    #container #main-container2 .lab-container-pokeballs {
+      grid-column: 5/-5;
+      grid-row: 9/10;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around; }
   #container .cuadroGrande {
     background-color: white;
     border: solid 3px black;
     border-radius: 10%; }
+  #container .cuadroGrandeLab {
+    background: url(../img/oakLab.jpg);
+    background-size: cover;
+    border-radius: 10%; }
   #container #footer-container {
-    background: url(../img/grass-texture.png);
-    background-repeat: repeat;
-    background-size: 25rem;
+    background-color: blue;
+    opacity: 0.8;
     display: grid;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-rows: 1fr;
