@@ -153,6 +153,13 @@ form{
         grid-template-columns: repeat(12,1fr);
         grid-template-rows: repeat(12,1fr);
 
+        .lab-titulo{
+            grid-column: 5/-5;
+            grid-row: 3/4;
+            margin-top: 1.5rem;
+            z-index: 1;
+        }
+
         #logoPokemon-container{
             display: flex;
             justify-content: center;
@@ -168,7 +175,7 @@ form{
             flex-flow: row-reverse nowrap;
             justify-content: space-between;
             align-items: center;
-            padding: 0 10%;
+            padding: 0 5rem;
 
             #welcome-container-nombres{
                 display: flex;
@@ -195,19 +202,20 @@ form{
             background-color: rgba(255, 255, 255, 0.75);
             grid-column: 4/-4;
             grid-row: 3/-3;
-            border-radius: 5%;
+            border-radius: 5rem;
         }
 
         .lab-container-pokemon{
-            grid-column: 6/8;
-            grid-row: 4/-4;
+            grid-column: 5/-5;
+            grid-row: 4/8;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
 
             img {
-                width: 5rem;
+                width: 90%;
+                max-width: 10rem;
             }
         }
 
@@ -217,6 +225,11 @@ form{
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+
+            img{
+                width: 3.3rem;
+                height: 3rem;
+            }
         }
     }
 
@@ -232,9 +245,10 @@ form{
         border-radius: 10%;
     }
 
+
     #footer-container{
-        background-color: blue;
-        opacity: 0.8;
+        background-color: white;
+        border-top: solid 3px black;
         display: grid;
         grid-template-columns: 0.1fr 1fr 0.1fr;
         grid-template-rows: 1fr;
